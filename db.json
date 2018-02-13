@@ -1,0 +1,24 @@
+{
+  "productos": [
+    {
+      "nombre": "prueba 3editado",
+      "cantidad": "2222",
+      "id": 4,
+      "costo": 200,
+      "activo": true
+    },
+    {
+      "nombre": "aeditadoeditado",
+      "cantidad": "222",
+      "costo": 2222,
+      "id": 5
+    },
+    {
+      "nombre": "aaaaaaaaaeditado",
+      "cantidad": "3000",
+      "costo": 20000,
+      "activo": true,
+      "id": 6
+    }
+  ]
+}

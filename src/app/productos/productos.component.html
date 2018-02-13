@@ -1,0 +1,50 @@
+<div class="container">
+    <h1>Hero Form</h1>
+    <form #productoForm="ngForm" (submit)="submit()">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required #nombre="ngModel" [(ngModel)]="producto.nombre" name="nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="cantidad">Cantidad</label>
+        <input type="text" class="form-control" id="cantidad" #cantidad="ngModel" required [(ngModel)]="producto.cantidad" name="cantidad">
+      </div>
+
+      <div class="form-group">
+        <label for="costo">costo</label>
+        <input type="number" class="form-control" id="costo" #costo="ngModel" required [(ngModel)]="producto.costo" name="costo">
+      </div>
+
+
+      <div class="form-group">
+        <label for="costo">activo</label>
+        <input type="checkbox" class="form-control" id="activo" #activo="ngModel" required [(ngModel)]="producto.activo" name="activo">
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>
+
+<br>
+<div class="container">
+  <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>PRECIO</th>
+          <th>EDITAR</th>
+          <th>ELIMINAR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of productos">
+          <td>{{p.nombre}}</td>
+          <td>{{p.costo}}</td>
+          <td><button type="button" name="button" (click)="editarProducto(p)">editar</button></td>
+          <td><button type="button" name="button" (click)="removeProducto(p)">eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
